@@ -66,7 +66,7 @@ export const Navbar = ({ user, totalProducts }) => {
           <>
             <div>
               <Link className="navlink "  id="usercolor" to="/">
-               Welcome, {user} !
+               Welcome, {user} 😊!
               </Link>
             </div>
             {/* <div className="cart-menu-btn">
