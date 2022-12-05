@@ -16,6 +16,7 @@
 .product:hover{
     box-shadow: 8px 8px 33px 0px;
     transition: all 0.3s ease-in-out;
+    background-color: beige;
 
 
 }
