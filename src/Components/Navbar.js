@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import logo from "../Images/logo.png";
-// import logo from "../Images/logo.jpg";
 import "./styles/Navbar.css"
 
 import { Icon } from "react-icons-kit";
@@ -79,6 +77,11 @@ export const Navbar = ({ user, totalProducts }) => {
             <div>
               <Link className="btn btn-success btn-md" to="add-products">
                 Add Products
+              </Link>
+            </div>
+            <div>
+              <Link className="btn btn-success btn-md" to="farmer-Register">
+                Register here
               </Link>
             </div>
 

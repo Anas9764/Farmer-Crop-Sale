@@ -48,24 +48,26 @@ export const Home = (props) => {
   const [products, setProducts] = useState([]);
 
   // getting products function
-  const getProducts = async () => {
-    const products = await fs.collection("Products").get();
-    const productsArray = [];
-    for (var snap of products.docs) {
-      var data = snap.data();
-      data.ID = snap.id;
-      productsArray.push({
-        ...data,
-      });
-      if (productsArray.length === products.docs.length) {
-        setProducts(productsArray);
+    const getProducts = async () => {
+      const products = await fs.collection("Products").get();
+      const productsArray = [];
+      console.log(productsArray)
+      for (var snap of products.docs) {
+        var data = snap.data();
+        data.ID = snap.id;
+        productsArray.push({
+          ...data,
+        });
+        if (productsArray.length === products.docs.length) {
+          setProducts(productsArray);
+        }
       }
-    }
-  };
+    };
 
   useEffect(() => {
     getProducts();
   }, []);
+
 
   // state of totalProducts
   const [totalProducts, setTotalProducts] = useState(0);
