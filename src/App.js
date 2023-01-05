@@ -10,6 +10,7 @@ import { Cart } from "./Components/Cart";
 import "../src/Components/styles/App.css";
 import Footer from "../src/Components/Footer";
 import ViewProduct from "./Components/ViewProduct";
+import { Contact } from "./Components/Contact";
 export const App = () => {
     return (
         <>
@@ -22,6 +23,8 @@ export const App = () => {
                     <Route path="/farmer-Register" component={FarmerRegister} />
                     <Route path="/product" component={Home} />
                     <Route path="/view/:productId" component={ViewProduct} />
+                    <Route path="/contact" component={Contact} />
+
                     {/* try to use same  ^^^  variable name  in the url param as of the variable in useParams() in ViewProduct.js */}
                     {/* <Route path="/products" component={Products}/> */}
 

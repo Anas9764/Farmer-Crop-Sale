@@ -1,9 +1,9 @@
 /* Body{
     background-color: aquamarine;
-} */
+} */    
 .product {
-    width: 321px;
-    height: auto;
+    /* width: 321px; */
+    /* height: auto; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,11 +12,14 @@
     margin-right: 24px;
     padding: 12px;
     border-radius: 17px;
+    background-color: white !important;
+    border: none !important;
+
 }
-.product:hover{
+/* .product:hover{
     box-shadow: 8px 8px 33px 0px;
     transition: all 0.3s ease-in-out;
     background-color: beige;
 
 
-}
+} */

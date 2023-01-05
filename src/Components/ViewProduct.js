@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "../Images/caro.jpeg";
 import "../Components/styles/ViewProduct.css";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import {  fs } from "../Config/Config";
 import { useState, useEffect } from "react";
@@ -25,12 +26,13 @@ function ViewProduct() {
         <>
             <div
                 className="card mb-3"
-                style={{ width: "80%", margin: "10rem" }}
+                style={{ width: "80%", margin: "10rem"}}
             >
                 <div className="row g-0">
-                    <div className="col-md-4">
+                {/* style={{height:"0rem",width:"284px",padding:"1px",alignItems:"center" ,display:"flex",justifyContent:"center"}} */}
+                    <div className="col-md-4" >
                         <img
-                            src={Image}
+                            src={product.url}
                             className="img-fluid rounded-start"
                             alt="..."
                         />
@@ -44,6 +46,16 @@ function ViewProduct() {
                                     Price: {product.price}
                                 </small>
                             </p>
+            <Link to="/contact" className="link">
+                            
+                            <button className="btn btn-success btn-md">
+              Contact to Farmer
+            </button>
+            </Link>
+
+            <Link to="/" className="link">
+              <button className="btn m-3 btn-success btn-md">back</button>
+            </Link>
                         </div>
                     </div>
                 </div>

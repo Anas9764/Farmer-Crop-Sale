@@ -126,7 +126,7 @@ export const FarmerRegister = () => {
           value={PhoneNum}
         />
 
-        <label>Upload Product Image</label>
+        <label>Upload Image</label>
         <input
           type="file"
           id="file"
