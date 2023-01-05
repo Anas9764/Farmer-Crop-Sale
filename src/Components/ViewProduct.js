@@ -1,48 +1,55 @@
 import React from "react";
 import Image from "../Images/caro.jpeg";
-import "../Components/styles/ViewProduct.css"
-import {  useParams } from 'react-router-dom';
-import { auth, fs } from "../Config/Config";
-import  { useState, useEffect } from "react";
-
+import "../Components/styles/ViewProduct.css";
+import { useParams } from "react-router-dom";
+import {  fs } from "../Config/Config";
+import { useState, useEffect } from "react";
 
 function ViewProduct() {
-  let {productId}= useParams()
-  console.log(productId)
-  const [product, setProduct]= useState({})
+    const { productId } = useParams();
+    console.log(productId);
+    const [product, setProduct] = useState({});
 
-  // const getProducts = async () => {
-  //   const products = await fs.collection("Products").get();
-  //   const productsArray = [];
-  //   for (var snap of products.docs) {
-  //     var data = snap.data();
-  //     data.ID = snap.id;
-  //     productsArray.push({
-  //       ...data,
-  //     });
-  //     if (productsArray.length === products.docs.length) {
+    useEffect(() => {
+        fs.collection("Products")
+            .doc(productId)
+            .get()
+            .then((doc) => {
+                // this was understood by reading the firebase documentation.
+                setProduct(doc.data());
+            });
+    }, []);
+    console.log(product);
 
-  //     }
-  //   }
-  // };
-
-  
-  // useEffect(() => {
-  //   getProducts();
-  // }, []);
-
-
-
-  // console.log(Product)
-
-  return (
-    <>
-    <div className="card mb-3" style={{width:'80rem' ,margin:'10rem'}}>
-      
-    </div>
-  
-  </>
-  );
+    return (
+        <>
+            <div
+                className="card mb-3"
+                style={{ width: "80%", margin: "10rem" }}
+            >
+                <div className="row g-0">
+                    <div className="col-md-4">
+                        <img
+                            src={Image}
+                            className="img-fluid rounded-start"
+                            alt="..."
+                        />
+                    </div>
+                    <div className="col-md-8">
+                        <div className="card-body">
+                            <h5 className="card-title">{product.title}</h5>
+                            <p className="card-text">{product.description}</p>
+                            <p className="card-text">
+                                <small className="text-muted">
+                                    Price: {product.price}
+                                </small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
 }
 
 export default ViewProduct;
