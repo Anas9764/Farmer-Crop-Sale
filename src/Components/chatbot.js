@@ -11,8 +11,16 @@ const responses = [
     answer: 'My name is Chatbot!',
   },
   {
-    question: 'What is your purpose?',
-    answer: 'I am here to help answer any questions you may have!',
+    question: 'How to add product',
+    answer: 'First you have to login then, On navbar you can see the add product button click on that and fill the form to add products.',
+  },
+  {
+    question: 'How to buy products?',
+    answer: 'To buy products first, you have to login and you can click on view product button you will be redirected to details page there you can contact the seller for more information',
+  },
+  {
+    question: 'Is there any discount?',
+    answer: 'I am a chatbot! I cannot decide the discont you have to contact farmer or seller for more information',
   },
   {
     question: 'What can you do?',

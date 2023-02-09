@@ -51,12 +51,12 @@ function ViewProduct() {
             <Link to="/contact" className="link">
                             
                             <button className="btn btn-success btn-md">
-              Contact to Farmer
+              Get Quote
             </button>
             </Link>
 
             <Link to="/" className="link">
-              <button className="btn m-3 btn-success btn-md">back</button>
+              <button className="btn m-3 btn-success btn-md">Back</button>
             </Link>
                         </div>
                     </div>

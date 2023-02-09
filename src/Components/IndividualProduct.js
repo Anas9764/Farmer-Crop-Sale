@@ -29,7 +29,7 @@ export const IndividualProduct = ({ individualProduct, addToCart }) => {
                 id="viewbtn"
                 onClick={handleAddToCart}
             >
-                view product
+                View Product
             </div>
             {/* <div>
               

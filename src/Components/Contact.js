@@ -134,8 +134,7 @@ export const Contact = () => {
                       </div>
                       <div className="text pl-3">
                         <p>
-                          <span>Address:</span> 198 West 21th Street, Suite 721
-                          New York NY 10016
+                          <span>Address:</span> MGM's College of Engg. Nanded.
                         </p>
                       </div>
                     </div>
@@ -146,7 +145,7 @@ export const Contact = () => {
                       <div className="text pl-3">
                         <p>
                           <span>Phone:</span>
-                          <a href="tel://123456789">+1235 2355 98</a>
+                          <a href="tel://123456789">+91 98235 2355 </a>
                         </p>
                       </div>
                     </div>
@@ -158,7 +157,7 @@ export const Contact = () => {
                         <p>
                           <span>Email:</span>
                           <a href="mailto:info@yoursite.com">
-                            info@yoursite.com
+                            info@cropsale.com
                           </a>
                         </p>
                       </div>
@@ -170,7 +169,7 @@ export const Contact = () => {
                       <div className="text pl-3">
                         <p>
                           <span>Website:</span>
-                          <a href="#">yoursite.com</a>
+                          <a href="#">www.cropsale.com</a>
                         </p>
                       </div>
                     </div>
