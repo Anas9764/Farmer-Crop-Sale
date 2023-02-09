@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './chatbot.css';
 
 const initialQuestions = [
-  { question: 'Hello! How can I help you today?', sender: 'bot' },
+  { question: 'Hello! How can I help you today?',answer:"", sender: 'bot' },
 ];
 
 const responses = [
@@ -11,11 +11,11 @@ const responses = [
     answer: 'My name is Chatbot!',
   },
   {
-    question: 'How to add product',
+    question: 'How to add product?',
     answer: 'First you have to login then, On navbar you can see the add product button click on that and fill the form to add products.',
   },
   {
-    question: 'How to buy products?',
+    question: 'How to buy product?',
     answer: 'To buy products first, you have to login and you can click on view product button you will be redirected to details page there you can contact the seller for more information',
   },
   {
@@ -43,7 +43,7 @@ function Chatbot() {
 
     responses.forEach(({ question, answer }) => {
       if (question.toLowerCase() === inputValue.toLowerCase()) {
-        setQuestions([...questions, { question: answer, sender: 'bot' }]);
+        setQuestions([...questions, { question: question, answer: answer, sender: 'bot' }]);
       }
     });
 
@@ -76,7 +76,11 @@ function Chatbot() {
                   question.sender === 'bot' ? 'chatbot-message-bot' : ''
                 }`}
               >
-                {question.question}
+                ----------------------------------------
+                Q: {question.question}
+                <br/>
+                A: {question.answer}
+
               </div>
             ))}
           </div>

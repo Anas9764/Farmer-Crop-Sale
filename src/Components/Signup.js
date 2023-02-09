@@ -66,7 +66,8 @@ export const Signup = () => {
       <form className="form-group" autoComplete="off" onSubmit={handleSignup}>
         <label>Full Name</label>
         <input
-          type="text"
+          type="name"
+          // pattern="[A-Za-z][5]"
           className="form-control"
           required
           onChange={(e) => setFullname(e.target.value)}

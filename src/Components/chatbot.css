@@ -98,7 +98,7 @@
   height: 100px;
   padding: 10px 20px;
   border-radius: 68px;
-  background-color: #1e4c50;
+  background-color: #1e4c50b3;
   color: #f5b921;
   border: none;
   cursor: pointer;position: fixed;
@@ -108,7 +108,7 @@
   height: 100px;
   padding: 10px 20px;
   border-radius: 68px;
-  background-color: #1e4c50;
+
   color: #f5b921;
   border: none;
   cursor: pointer;
