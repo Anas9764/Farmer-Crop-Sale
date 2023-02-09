@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import {  fs } from "../Config/Config";
 import { useState, useEffect } from "react";
+import "./App.scss";
+
 
 function ViewProduct() {
     const { productId } = useParams();

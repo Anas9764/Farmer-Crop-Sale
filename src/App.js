@@ -8,9 +8,10 @@ import { AddProducts } from "./Components/AddProducts";
 import { FarmerRegister } from "./Components/FarmerRegister";
 import { Cart } from "./Components/Cart";
 import "../src/Components/styles/App.css";
-import Footer from "../src/Components/Footer";
+// import {Chatbot} from "./Components/Chatbot"; 
 import ViewProduct from "./Components/ViewProduct";
 import { Contact } from "./Components/Contact";
+import Chatbot  from "./Components/chatbot";
 export const App = () => {
     return (
         <>
@@ -32,9 +33,8 @@ export const App = () => {
                     <Route component={NotFound} />
                 </Switch>
             </BrowserRouter>
-            {/* <div>
-        <Footer/>
-      </div> */}
+        
+        <Chatbot/>
         </>
     );
 };
