@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { auth, fs } from "../Config/Config";
+import { Link } from "react-router-dom";
 
 // import firebaseDB from "./firebase";
 import "./App.scss";
@@ -59,7 +60,7 @@ export const Contact = () => {
                       onSubmit={handleSubmit}
                     >
                       <div className="row">
-                        <div className="col-md-12">
+                        <div className="col-md-12 m-2">
                           <div className="form-group">
                             <input
                               type="text"
@@ -71,7 +72,7 @@ export const Contact = () => {
                             />
                           </div>
                         </div>
-                        <div className="col-md-12">
+                        <div className="col-md-12 m-2">
                           <div className="form-group">
                             <input
                               type="email"
@@ -83,25 +84,25 @@ export const Contact = () => {
                             />
                           </div>
                         </div>
-                        <div className="col-md-12">
+                        <div className="col-md-12 m-2">
                           <div className="form-group">
                             <input
                               type="text"
                               className="form-control"
                               name="subject"
-                              placeholder="Subject"
+                              placeholder="Your Price"
                               onChange={handleInputChange}
                               value={subject}
                             />
                           </div>
                         </div>
-                        <div className="col-md-12">
+                        <div className="col-md-12 m-2">
                           <div className="form-group">
                             <textarea
                               type="text"
                               className="form-control"
                               name="message"
-                              placeholder="Message"
+                              placeholder="Provide Address and Contact detais"
                               cols="30"
                               rows="6"
                               onChange={handleInputChange}
@@ -109,24 +110,29 @@ export const Contact = () => {
                             ></textarea>
                           </div>
                         </div>
-                        <div className="col-md-12">
+                        <div className="col-md-12 m-2">
                           <div className="form-group">
                             <input
                               type="submit"
-                              value="Send Message"
-                              className="btn btn-primary"
+                              value="Get Quote"
+                              className="btn btn-success"
                             />
+                            <Link to="/" className="link">
+                              <button className="btn m-3 btn-success btn-md">
+                                Back
+                              </button>
+                            </Link>
                           </div>
                         </div>
                       </div>
                     </form>
                   </div>
                 </div>
-                <div className="col-md-6 d-flex align-items-stretch">
+                <div className="col-md-6 my-5 d-flex align-items-stretch">
                   <div className="info-wrap w-100 p-lg-5 p-4 img">
                     <h3>Contact us</h3>
                     <p className="mb-4">
-                      We're open for any suggestion or just to have a chat
+                      We are open for orders Please fill the form to buy product
                     </p>
                     <div className="dbox w-100 d-flex align-items-start">
                       <div className="icon d-flex align-items-center justify-content-center">
@@ -134,8 +140,7 @@ export const Contact = () => {
                       </div>
                       <div className="text pl-3">
                         <p>
-                          <span>Address:</span> 198 West 21th Street, Suite 721
-                          New York NY 10016
+                          <span>Address:</span> MGM's College of Engg. Nanded.
                         </p>
                       </div>
                     </div>
@@ -146,7 +151,7 @@ export const Contact = () => {
                       <div className="text pl-3">
                         <p>
                           <span>Phone:</span>
-                          <a href="tel://123456789">+1235 2355 98</a>
+                          <a href="tel://123456789">+91 98235 2355 </a>
                         </p>
                       </div>
                     </div>
@@ -158,7 +163,7 @@ export const Contact = () => {
                         <p>
                           <span>Email:</span>
                           <a href="mailto:info@yoursite.com">
-                            info@yoursite.com
+                            info@cropsale.com
                           </a>
                         </p>
                       </div>
@@ -170,7 +175,7 @@ export const Contact = () => {
                       <div className="text pl-3">
                         <p>
                           <span>Website:</span>
-                          <a href="#">yoursite.com</a>
+                          <a href="#">www.cropsale.com</a>
                         </p>
                       </div>
                     </div>

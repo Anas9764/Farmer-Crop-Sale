@@ -60,8 +60,8 @@ export const FarmerRegister = () => {
                 url,
               })
               .then(() => {
-                alert("are you sure to submit");
-                setSuccessMsg("Product added successfully");
+                alert("Are you sure you want to submit?");
+                setSuccessMsg("Profile added successfully");
                 setName("");
                 setPhoneNum("");
                 setEmail("");
@@ -119,8 +119,9 @@ export const FarmerRegister = () => {
         <label>Phone No.</label>
 
         <input
-          type="text"
+          type="tel"
           className="form-control"
+          pattern="[0-9]{10}"
           required
           onChange={(e) => setPhoneNum(e.target.value)}
           value={PhoneNum}

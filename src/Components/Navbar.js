@@ -42,7 +42,7 @@ export const Navbar = ({ user, totalProducts }) => {
 
             <div>
               <Link  className="btn btn-success btn-md" to="signup">
-                SIGN UP
+                SignUp
               </Link>
             </div>
             <div>
@@ -50,7 +50,7 @@ export const Navbar = ({ user, totalProducts }) => {
                 LOGIN
               </Link> */}
               <Link class="btn btn-success" to="login">
-                LOGIN
+                Login
               </Link>
 
               
@@ -86,7 +86,7 @@ export const Navbar = ({ user, totalProducts }) => {
             </div>
 
             <div className="btn btn-success btn-md" onClick={handleLogout}>
-              LOGOUT
+              Logout
             </div>
           </>
         )}

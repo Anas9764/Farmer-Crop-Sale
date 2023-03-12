@@ -2,8 +2,10 @@
     background-color: aquamarine;
 } */    
 .product {
-    /* width: 321px; */
-    /* height: auto; */
+   
+    width: 321px;
+    height: 444px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;

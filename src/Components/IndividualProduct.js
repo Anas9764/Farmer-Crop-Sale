@@ -21,7 +21,7 @@ export const IndividualProduct = ({ individualProduct, addToCart }) => {
             <div className="product-text description">
                 {individualProduct.description}
             </div>
-            <div className="product-text price">
+            <div className="product-text price" id="product-text">
                 ₹ {individualProduct.price} / kg
             </div>
             <div
@@ -29,7 +29,7 @@ export const IndividualProduct = ({ individualProduct, addToCart }) => {
                 id="viewbtn"
                 onClick={handleAddToCart}
             >
-                view product
+                View Product
             </div>
             {/* <div>
               
