@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "../Images/caro.jpeg";
 import "../Components/styles/ViewProduct.css";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import {  fs } from "../Config/Config";
-import { useState, useEffect } from "react";
+import { auth, fs } from "../Config/Config";
 import "./App.scss";
 
 
@@ -12,8 +11,7 @@ function ViewProduct() {
     const { productId } = useParams();
     console.log(productId);
     const [product, setProduct] = useState({});
-
-    useEffect(() => {
+5    useEffect(() => {
         fs.collection("Products")
             .doc(productId)
             .get()
